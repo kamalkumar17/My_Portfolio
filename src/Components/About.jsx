@@ -23,7 +23,9 @@ const About = () => {
           Frontend Developer
         </h2>
         <p className='text-base leading-relaxed text-gray-600 lg:text-lg'>
-          My Name is <span className='text-2xl font-bold text-gray-800'>Kamal</span>. I am a passionate Front-End Web Developer with a strong foundation in HTML, CSS, and JavaScript. I have a keen eye for design and a commitment to creating user-friendly, responsive websites. My goal is to build engaging web applications that provide seamless user experiences. I am always eager to learn new technologies and improve my skills in the ever-evolving field of web development.
+          My Name is <span className='text-2xl font-bold text-gray-800'>Kamal</span>. a frontend developer driven by clean design and clean code. I specialize in building modern, responsive web apps using React.js, Tailwind CSS, and JavaScript. I’ve brought projects like a real-time Crypto Tracker and a Pokédex search app to life, focusing on smooth UX, reusable components, and efficient state handling.
+
+I enjoy turning complex ideas into simple, elegant interfaces. Whether I’m collaborating with a team or building solo, my goal is always the same: craft user-first experiences that look good and work even better.
         </p>
         <div className='flex flex-col items-center mt-6 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4'>
           <Link
