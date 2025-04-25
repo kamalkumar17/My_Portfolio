@@ -1,0 +1,50 @@
+import React from 'react'
+import AboutImage from '../assets/my_photo.jpg' // Adjust the path based on your folder structure
+import { Link } from 'react-router-dom'
+
+const About = () => {
+  return (
+    <div className='flex flex-col-reverse items-center justify-center h-screen gap-5 px-5 bg-gray-200 lg:flex-row'>
+      {/* Left Side - Image */}
+      <div className='flex justify-center w-full lg:w-1/2'>
+        <img
+          src={AboutImage}
+          alt="About"
+          className='object-cover h-auto max-w-sm rounded-lg shadow-lg lg:w-auto'
+        />
+      </div>
+
+      {/* Right Side - Text */}
+      <div className='flex flex-col items-center justify-center w-full text-center lg:w-1/2 lg:items-start lg:text-left lg:mt-0'>
+        <h2 className='mb-4 text-3xl font-bold text-gray-800 lg:text-4xl'>
+          About Me
+        </h2>
+        <h2 className='mb-4 text-3xl font-bold text-gray-800 lg:text-5xl'>
+          Frontend Developer
+        </h2>
+        <p className='text-base leading-relaxed text-gray-600 lg:text-lg'>
+          My Name is <span className='text-2xl font-bold text-gray-800'>Kamal</span>. I am a passionate Front-End Web Developer with a strong foundation in HTML, CSS, and JavaScript. I have a keen eye for design and a commitment to creating user-friendly, responsive websites. My goal is to build engaging web applications that provide seamless user experiences. I am always eager to learn new technologies and improve my skills in the ever-evolving field of web development.
+        </p>
+        <div className='flex flex-col items-center mt-6 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4'>
+          <Link
+            to="https://drive.google.com/file/d/1q4NBpso08_wSenkZx8w3QMTKilJcbnf5/view?usp=sharing"
+            target="_blank"
+            download
+            className='px-6 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-900'
+          >
+            Download Resume
+          </Link>
+          <Link
+            to= "https://linkedin.com/in/kamal-kumar-418b4521a"
+            target="_blank"
+            className='px-6 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-900'
+          >
+            Visit LinkedIn
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default About
