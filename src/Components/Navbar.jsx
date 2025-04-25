@@ -9,6 +9,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <nav className="z-50 w-full text-black bg-gray-800 shadow-lg">
@@ -104,14 +108,22 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Overlay */}
+        {isOpen && (
+          <div
+            className="fixed inset-0 z-40"
+            onClick={closeSidebar} // Close sidebar when clicking outside
+          ></div>
+        )}
+
         {/* Sidebar for Mobile */}
         <div
-          className={`z-10 fixed top-0 right-0 h-full w-64 bg-gray-800 text-white transform ${
+          className={`z-50 fixed top-0 right-0 h-full w-64 bg-gray-800 text-white transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           } transition-transform duration-300 ease-in-out`}
         >
           <button
-            onClick={toggleSidebar}
+            onClick={closeSidebar}
             className="absolute text-white top-4 right-4 hover:text-gray-300 focus:outline-none"
           >
             <svg
@@ -132,6 +144,7 @@ const Navbar = () => {
           <div className="flex flex-col items-start p-6 space-y-4">
             <NavLink
               to="/"
+              onClick={closeSidebar} // Close sidebar when clicking a menu item
               className={({ isActive }) =>
                 `w-full px-3 py-2 transition duration-300 rounded-md ${
                   isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
@@ -142,6 +155,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               to="/about"
+              onClick={closeSidebar} // Close sidebar when clicking a menu item
               className={({ isActive }) =>
                 `w-full px-3 py-2 transition duration-300 rounded-md ${
                   isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
@@ -152,6 +166,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               to="/skills"
+              onClick={closeSidebar} // Close sidebar when clicking a menu item
               className={({ isActive }) =>
                 `w-full px-3 py-2 transition duration-300 rounded-md ${
                   isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
@@ -162,6 +177,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               to="/projects"
+              onClick={closeSidebar} // Close sidebar when clicking a menu item
               className={({ isActive }) =>
                 `w-full px-3 py-2 transition duration-300 rounded-md ${
                   isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
@@ -172,6 +188,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               to="/contact"
+              onClick={closeSidebar} // Close sidebar when clicking a menu item
               className={({ isActive }) =>
                 `w-full px-3 py-2 transition duration-300 rounded-md ${
                   isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
@@ -180,9 +197,9 @@ const Navbar = () => {
             >
               Contact
             </NavLink>
-
             {/* Social Media Icons */}
-            <div className="flex mt-6 space-x-4">
+            <h1 className="mt-2 text-2xl text-red-500">Let's Connect</h1>
+            <div className="flex mt-2 space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"

@@ -11,7 +11,7 @@ const ProjectCard = ({ bgImage, demoLink }) => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100">
+      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100">
         <a
           href={demoLink}
           target="_blank"
